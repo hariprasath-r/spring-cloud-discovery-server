@@ -1,0 +1,12 @@
+server.port: ${PORT:8761}
+
+spring.application.name: service-discovery-server
+
+eureka:
+  instance:
+    hostname: ${spring.application.name:localhost}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: https://${spring.application.name}:${server.port}/eureka/
