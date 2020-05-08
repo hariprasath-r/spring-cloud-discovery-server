@@ -1,0 +1,1 @@
+server.port: ${host.environment.port:8771}

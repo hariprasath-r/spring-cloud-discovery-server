@@ -1,1 +1,9 @@
-spring.application.name: service-discovery-server
+spring:
+  application.name: service-discovery-server
+  profiles:
+    active: local
+  cloud:
+    config:
+      uri: http://localhost:8899
+
+host.environment.port: 8761
